@@ -29,7 +29,7 @@ portugueseButton.onclick = toggleLanguage;
 window.onload = async () => {
     try {
         toggleLanguage()
-       await loadCharacters(endpoint, 1);
+      
        buttonVisibility();
     } catch(error) {
         console.log('Erro ao carregar cards');
@@ -101,6 +101,10 @@ async function loadCharacters(urlEndpoint, page = 1) {
                     if(imgNames[i] === 'VelKoz') {
                         imgNames[i] = 'Velkoz'
                     }
+
+                    if(imgNames[i] === 'Bardo') {
+                        imgNames[i] = 'Bard'
+                    }
                     
                     
                 }          
@@ -161,7 +165,7 @@ async function loadCharacters(urlEndpoint, page = 1) {
  
 
         //endpoint = urlEndpoint
-
+       
     } catch (error) {
         console.log('erro ao carregar os personagens')
     }
