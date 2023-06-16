@@ -1,5 +1,5 @@
 let currentLanguage = 'en_US'
-let endpoint = `http://ddragon.leagueoflegends.com/cdn/12.6.1/data/${currentLanguage}/champion.json`
+let endpoint = `https://ddragon.leagueoflegends.com/cdn/12.6.1/data/${currentLanguage}/champion.json`
 const modal = document.getElementById('modal')
 let currentPage = 1;
 const cardsPerPage = 10;
@@ -15,7 +15,7 @@ const portugueseButton = document.getElementById('portuguese-button');
     event.preventDefault();
     portugueseButton.innerText = currentLanguage
     currentLanguage = currentLanguage === 'en_US' ? 'pt_BR' : 'en_US';
-    endpoint = `http://ddragon.leagueoflegends.com/cdn/12.6.1/data/${currentLanguage}/champion.json`
+    endpoint = `https://ddragon.leagueoflegends.com/cdn/12.6.1/data/${currentLanguage}/champion.json`
     console.log(currentLanguage)
     loadCharacters(endpoint, 1)
     buttonVisibility()
